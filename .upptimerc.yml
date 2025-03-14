@@ -28,20 +28,12 @@ status-website:
     <gcds-header lang=en lang-href=/fr/ signature-variant=colour skip-to-href=#> 
         <gcds-search lang=en slot=search action=/sr/srb.html placeholder=Canada.ca></gcds-search>
         <gcds-top-nav slot=menu label="Top navigation" alignment=right>
-            <gcds-nav-link href=/ slot=home>Status-Statut</gcds-nav-link>
-            <gcds-nav-group open-trigger=Product menu-label=Product>
-            <gcds-nav-link href=/product>Overview</gcds-nav-link>
-            <gcds-nav-link href=/product/storage>Storage</gcds-nav-link>
-            </gcds-nav-link>
-        </gcds-nav-group>
-        <gcds-nav-group open-trigger=Resources menu-label=Resources>
-            <gcds-nav-link href=https://github.com/ssc-sp/datahub-portal/releases>Product updates</gcds-nav-link>
-            <gcds-nav-link href=https://gcxgce.sharepoint.com/teams/10002160>GCxchange community</gcds-nav-link>
-        </gcds-nav-group>
+            <gcds-nav-link href=/status-statut/ slot=home>Status-Statut</gcds-nav-link>
             <gcds-nav-link href=https://federal-science-datahub.canada.ca/ slot>Log in</gcds-nav-link>
         </gcds-top-nav>
+        
         <gcds-breadcrumbs slot=breadcrumb>
-            <gcds-breadcrumbs-item href=/>Federal Science DataHub</gcds-breadcrumbs-item>
+            <gcds-breadcrumbs-item href=/status-statut/>Status-Statut</gcds-breadcrumbs-item>
         </gcds-breadcrumbs>
         <gcds-topic-menu slot=menu lang=en></gcds-topic-menu>
     </gcds-header>
