@@ -23,7 +23,7 @@ on:
     types: [setup]
   workflow_dispatch:
 jobs:
-  release:
+  build:
     name: Setup Upptime
     runs-on: ubuntu-latest
     steps:
