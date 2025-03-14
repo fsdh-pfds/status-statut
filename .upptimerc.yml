@@ -18,15 +18,36 @@ status-website:
   introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
   introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
   scripts:
-    - src: https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@0.32.0/dist/gcds/gcds.esm.js
-      type: module
+    - src: https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@0.32.0/dist/gcds/gcds.js
   links:
     - rel: stylesheet
       href: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css
-      crossorigin: anonymous
     - rel: stylesheet
       href: https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@0.32.0/dist/gcds/gcds.css
+  customBodyHtml: |
+    <gcds-container size="xl" main-container centered tag="main">
+        <gcds-grid tag="section" columns="1fr" columns-desktop="{{ if $showSidebar }}
+            1fr 3fr
+          {{ else }}
+            1fr
+          {{ end }}" align-items="start" class="hydrated">
+            {{ if $showSidebar }}
+            <aside role="complementary">
+                {{ partial "side-navigation" . }}
+            </aside>
+            {{ end }}
+            <section class="mb-400">
+                {{ partial "heading" . }}
+                {{ $showToc := or .Params.showToc .Site.Params.showToc }}
+                {{ if and $showToc .TableOfContents }}
+                <gcds-fieldset fieldset-id="field-toc" legend="" class="mb-400">
+                    {{ .TableOfContents }}
+                </gcds-fieldset>
+                {{ end }}
+                {{ $content := .Content | replaceRE "<p>(.*?)</p>" "<gcds-text character-limit=\"false\">$1</gcds-text>" }}
+                {{ $content | safeHTML }}
+                {{ partial "date-modified" . }}
+            </section>
+        </gcds-grid>
+    </gcds-container>
 
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
