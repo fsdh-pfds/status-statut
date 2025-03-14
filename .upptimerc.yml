@@ -38,3 +38,6 @@ status-website:
         <gcds-topic-menu slot=menu lang=en></gcds-topic-menu>
     </gcds-header>
 
+  css: |
+    nav { display: none !important; } 
+  
