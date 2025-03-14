@@ -25,17 +25,12 @@ status-website:
     <script nomodule src="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@0.32.0/dist/gcds/gcds.js"></script>
 
   customBodyHtml: |
-    <gcds-header lang=en lang-href=/fr/ signature-variant=colour skip-to-href=#> 
+    <gcds-header signature-variant=colour> 
         <gcds-search lang=en slot=search action=/sr/srb.html placeholder=Canada.ca></gcds-search>
         <gcds-top-nav slot=menu label="Top navigation" alignment=right>
             <gcds-nav-link href=/status-statut/ slot=home>Status-Statut</gcds-nav-link>
             <gcds-nav-link href=https://github.com/fsdh-pfds/status-statut/ slot>GitHub</gcds-nav-link>
         </gcds-top-nav>
-        
-        <gcds-breadcrumbs slot=breadcrumb>
-            <gcds-breadcrumbs-item href=/status-statut/>Status-Statut</gcds-breadcrumbs-item>
-        </gcds-breadcrumbs>
-        <gcds-topic-menu slot=menu lang=en></gcds-topic-menu>
     </gcds-header>
 
   css: |
