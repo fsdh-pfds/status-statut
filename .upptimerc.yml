@@ -13,8 +13,6 @@ status-website:
   # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
   #cname: status-statut.sds.canada.ca 
   baseUrl: /status-statut
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Status-Statut
   introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
   introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
   theme: gcds-theme
@@ -27,10 +25,10 @@ status-website:
     <script nomodule src="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@0.32.0/dist/gcds/gcds.js"></script>
 
   customBodyHtml: |
-    <gcds-header lang=en lang-href=https://sds.canada.ca/fr/ signature-variant=colour skip-to-href=#> 
+    <gcds-header lang=en lang-href=/fr/ signature-variant=colour skip-to-href=#> 
         <gcds-search lang=en slot=search action=/sr/srb.html placeholder=Canada.ca></gcds-search>
         <gcds-top-nav slot=menu label="Top navigation" alignment=right>
-            <gcds-nav-link href=/ slot=home>Federal Science DataHub</gcds-nav-link>
+            <gcds-nav-link href=/ slot=home>Status-Statut</gcds-nav-link>
             <gcds-nav-group open-trigger=Product menu-label=Product>
             <gcds-nav-link href=/product>Overview</gcds-nav-link>
             <gcds-nav-link href=/product/storage>Storage</gcds-nav-link>
