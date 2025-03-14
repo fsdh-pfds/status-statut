@@ -76,9 +76,13 @@ jobs:
           path: ./site/status-page/__sapper__/export/
 
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
+        id: deployment
+        environment:
+          name: github-pages
+          url: ${{ steps.deployment.outputs.page_url }}
         
+
       #- uses: peaceiris/actions-gh-pages@v4
       #  name: GitHub Pages Deploy
       #  with:
