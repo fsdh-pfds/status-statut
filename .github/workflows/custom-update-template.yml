@@ -26,17 +26,24 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
+      - name: Create App token
+        id: create_token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ vars.FSDH_UPPTIME_BOT_APP_ID }}
+          private-key: ${{ secrets.FSDH_UPPTIME_BOT_APP_KEY }}
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
-          token: ${{ secrets.GH_PAT || github.token }}
+          token: ${{ steps.create_token.outputs.token }}
       - name: Update template
         uses: upptime/uptime-monitor@master
         with:
           command: "update-template"
         env:
-          GH_PAT: ${{ secrets.GH_PAT || github.token }}
+          GH_PAT: ${{ steps.create_token.outputs.token }}
       - name: Remove workflows files
         run: |
           FILES_TO_REMOVE=(".github/workflows/site.yml" ".github/workflows/setup.yml")
