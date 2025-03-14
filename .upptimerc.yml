@@ -25,7 +25,24 @@ status-website:
     - rel: stylesheet
       href: https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@0.32.0/dist/gcds/gcds.css
   customBodyHtml: |
-    <gcds-breadcrumbs slot=breadcrumb>
-      <gcds-breadcrumbs-item href=/>Federal Science DataHub</gcds-breadcrumbs-item>
-    </gcds-breadcrumbs>
+    <gcds-header lang=en lang-href=https://sds.canada.ca/fr/ signature-variant=colour skip-to-href=#> 
+        <gcds-search lang=en slot=search action=/sr/srb.html placeholder=Canada.ca></gcds-search>
+        <gcds-top-nav slot=menu label="Top navigation" alignment=right>
+            <gcds-nav-link href=/ slot=home>Federal Science DataHub</gcds-nav-link>
+            <gcds-nav-group open-trigger=Product menu-label=Product>
+            <gcds-nav-link href=/product>Overview</gcds-nav-link>
+            <gcds-nav-link href=/product/storage>Storage</gcds-nav-link>
+            </gcds-nav-link>
+        </gcds-nav-group>
+        <gcds-nav-group open-trigger=Resources menu-label=Resources>
+            <gcds-nav-link href=https://github.com/ssc-sp/datahub-portal/releases>Product updates</gcds-nav-link>
+            <gcds-nav-link href=https://gcxgce.sharepoint.com/teams/10002160>GCxchange community</gcds-nav-link>
+        </gcds-nav-group>
+            <gcds-nav-link href=https://federal-science-datahub.canada.ca/ slot>Log in</gcds-nav-link>
+        </gcds-top-nav>
+        <gcds-breadcrumbs slot=breadcrumb>
+            <gcds-breadcrumbs-item href=/>Federal Science DataHub</gcds-breadcrumbs-item>
+        </gcds-breadcrumbs>
+        <gcds-topic-menu slot=menu lang=en></gcds-topic-menu>
+    </gcds-header>
 
