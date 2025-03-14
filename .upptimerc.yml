@@ -16,7 +16,7 @@ status-website:
   name: "Status-Statut"
   introTitle: "Federal Science DataHub (FSDH) / Plateforme fédérale de données scientifiques (PFDS) "
   introMessage: Status page for FSDH products / Page de statut pour les produits du PFDS
-  theme: gcds-theme
+  theme: ""
   customHeadHtml: |
     <!-- Icons Font Awesome (to access icons, import Font Awesome) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
@@ -27,10 +27,9 @@ status-website:
 
   customBodyHtml: |
     <gcds-header signature-variant=colour> 
-        <gcds-search slot=search action=/sr/srb.html placeholder=Canada.ca></gcds-search>
         <gcds-top-nav slot=menu label="Top navigation" alignment=right>
             <gcds-nav-link href=/status-statut/ slot=home>Status-Statut</gcds-nav-link>
-            <gcds-nav-link href=https://github.com/fsdh-pfds/status-statut/ slot>GitHub</gcds-nav-link>
+            <gcds-nav-link href="https://github.com/fsdh-pfds/status-statut/" slot>GitHub</gcds-nav-link>
         </gcds-top-nav>
     </gcds-header>
 
