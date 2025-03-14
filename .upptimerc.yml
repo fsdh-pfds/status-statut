@@ -15,7 +15,7 @@ status-website:
   name: "Status-Statut"
   introTitle: "Federal Science DataHub (FSDH) / Plateforme fédérale de données scientifiques (PFDS) "
   introMessage: Status page for FSDH products / Page de statut pour les produits du PFDS
-  themeUrl: status-statut/gcds-theme.css
+  themeUrl: gcds-theme.css
   customHeadHtml: |
     <!-- Icons Font Awesome (to access icons, import Font Awesome) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
