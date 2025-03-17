@@ -31,6 +31,16 @@ status-website:
             <gcds-nav-link href="https://github.com/fsdh-pfds/status-statut/" slot>GitHub</gcds-nav-link>
         </gcds-top-nav>
     </gcds-header>
+  
+  js: |
+    function toggleLanguage() {
+        document.querySelectorAll('[lang]').forEach(element => {
+            let currentLang = element.getAttribute("lang");
+            let newLang = currentLang === "en" ? "fr" : "en";
+            element.setAttribute("lang", newLang);
+        });
+    }
+
     
 
 
