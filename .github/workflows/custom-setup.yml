@@ -38,7 +38,7 @@ jobs:
           GH_PAT: ${{ steps.create_token.outputs.token }}
       - name: Remove workflows files
         run: |
-          FILES_TO_REMOVE=(".github/workflows/graphs.yml" ".github/workflows/update-template.yml" ".github/workflows/site.yml" ".github/workflows/setup.yml")
+          FILES_TO_REMOVE=(".github/workflows/summary.yml" ".github/workflows/uptime.yml" ".github/workflows/response.yml" ".github/workflows/graphs.yml" ".github/workflows/update-template.yml" ".github/workflows/site.yml" ".github/workflows/setup.yml")
           REMOVED=false
           for file in "${FILES_TO_REMOVE[@]}"; do
             if [ -f "$file" ]; then
