@@ -31,6 +31,14 @@ status-website:
             <gcds-nav-link href="https://github.com/fsdh-pfds/status-statut/" slot>GitHub</gcds-nav-link>
         </gcds-top-nav>
     </gcds-header>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const footer = document.querySelector('footer');
+      if (footer) {
+        footer.insertAdjacentHTML('beforeend', '<gcds-footer lang=en display=full contextual-heading="Federal Science DataHub" contextual-links='{"Access FSDH":"https://federal-science-datahub.canada.ca/","Contact us":"/contact","Terms and conditions":"/terms-and-conditions"}'></gcds-footer>');
+      }
+    });
+  </script>
 
 i18n:
   activeIncidents: Active Incidents / Incidents actifs
