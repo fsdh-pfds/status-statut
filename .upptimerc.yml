@@ -16,9 +16,9 @@ status-website:
   # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
   #cname: status-statut.sds.canada.ca 
   baseUrl: /status-statut
-  name: "Status-Statut"
+  name: "FSDH Status | Statut de la PFDS"
   introTitle: "Federal Science DataHub (FSDH) / Plateforme fédérale de données scientifiques (PFDS) "
-  introMessage: Status page for FSDH products / Page de statut pour les produits du PFDS
+  introMessage: Status page for FSDH products / Page de statut pour les produits de la PFDS
   themeUrl: https://fsdh-pfds.github.io/status-statut/gcds-theme.css
   customHeadHtml: |
     <!-- Icons Font Awesome (to access icons, import Font Awesome) -->
@@ -27,13 +27,15 @@ status-website:
     <link rel="stylesheet" href="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@0.32.0/dist/gcds/gcds.css">
     <script type="module" src="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@0.32.0/dist/gcds/gcds.esm.js"></script>
     <script nomodule src="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@0.32.0/dist/gcds/gcds.js"></script>
+    <link rel="icon" href="https://design-system.alpha.canada.ca/favicon.ico" type="image/x-icon">
 
   customBodyHtml: |
     <gcds-header lang="en" lang-href="javascript:void(0)" signature-variant="colour" skip-to-href="#" role="banner" class="hydrated" onclick="toggleLanguage()">
-        <gcds-top-nav slot=menu label="Top navigation" alignment=right>
-            <gcds-nav-link href=/status-statut/ slot=home>Status-Statut</gcds-nav-link>
-            <gcds-nav-link href="https://github.com/fsdh-pfds/status-statut/" slot>GitHub</gcds-nav-link>
-        </gcds-top-nav>
+      <gcds-breadcrumbs slot="breadcrumb" class="hydrated">
+        <gcds-breadcrumbs-item href="https://sds.canada.ca/" role="listitem" class="gcds-breadcrumbs-item hydrated">
+          Federal Science DataHub / Plateforme fédérale de données scientifiques
+        </gcds-breadcrumbs-item>
+      </gcds-breadcrumbs>
     </gcds-header>
   
   js: |
@@ -47,7 +49,7 @@ status-website:
     document.addEventListener('DOMContentLoaded', () => {
       const footer = document.querySelector('footer');
       if (footer) {
-        footer.insertAdjacentHTML('afterend', '<gcds-footer lang="en" display="compact" contextual-heading="Status-Statut"></gcds-footer>');
+        footer.insertAdjacentHTML('afterend', '<gcds-footer lang="en" display="full" contextual-heading="Status | Statut"></gcds-footer>');
       }
     });
 
