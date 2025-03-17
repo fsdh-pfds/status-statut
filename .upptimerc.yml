@@ -47,6 +47,26 @@ status-website:
       }
     });
 
+    async function loadJsonFiles() {
+        try {
+            // Fetch English JSON
+            const enResponse = await fetch('https://fsdh-pfds.github.io/status-statut/en.json');
+            const enData = await enResponse.json();
+            console.log("English JSON Loaded:", enData);
+
+            // Fetch French JSON
+            const frResponse = await fetch('https://fsdh-pfds.github.io/status-statut/fr.json');
+            const frData = await frResponse.json();
+            console.log("French JSON Loaded:", frData);
+
+        } catch (error) {
+            console.error("Error loading JSON files:", error);
+        }
+    }
+
+    // Load JSON files on page load
+    document.addEventListener("DOMContentLoaded", loadJsonFiles);
+
     
 
 
