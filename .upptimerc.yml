@@ -58,8 +58,7 @@ status-website:
                 // Loop through all data attributes (except data-i18n) and replace placeholders
                 Array.from(element.attributes).forEach(attr => {
                     if (attr.name.startsWith("data-") && attr.name !== "data-i18n") {
-                        // Convert attribute name (after data-) to uppercase for matching placeholder (e.g., data-date → $DATE)
-                        const variableName = attr.name.slice(5).toUpperCase();
+                        const variableName = attr.name.slice(5).toUpperCase(); // e.g., data-date → $DATE
                         const regex = new RegExp(`\\$${variableName}`, "g");
                         text = text.replace(regex, attr.value);
                     }
@@ -69,12 +68,12 @@ status-website:
         });
     }
 
-    // Toggles language by loading the opposite language JSON file and updating all elements with [lang] attributes if needed
+    // Toggles language by loading the opposite language JSON file and updating all elements with [lang] attributes
     function toggleLanguage() {
         const currentLang = localStorage.getItem("selectedLang") || "en";
         const newLang = currentLang === "en" ? "fr" : "en";
         
-        // Optionally update elements with a [lang] attribute (if you want to adjust native components)
+        // Optionally update elements with a [lang] attribute
         document.querySelectorAll('[lang]').forEach(element => {
             element.setAttribute("lang", newLang);
         });
@@ -95,6 +94,21 @@ status-website:
         const savedLang = localStorage.getItem("selectedLang") || "en";
         loadTranslations(savedLang);
     });
+
+    // Use a MutationObserver to update translations when the DOM changes
+    const observer = new MutationObserver((mutations) => {
+        // When new nodes are added, update translations
+        mutations.forEach(mutation => {
+            if (mutation.addedNodes.length > 0) {
+                updateTranslations();
+            }
+        });
+    });
+
+    // Start observing the document body for changes in child elements or subtree modifications
+    observer.observe(document.body, { childList: true, subtree: true });
+
+
 
 
 
