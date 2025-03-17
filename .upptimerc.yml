@@ -25,12 +25,13 @@ status-website:
     <script nomodule src="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@0.32.0/dist/gcds/gcds.js"></script>
 
   customBodyHtml: |
-    <gcds-header signature-variant=colour> 
+    <gcds-header lang="en" lang-href="https://sds.canada.ca/fr/" signature-variant="colour" skip-to-href="#" role="banner" class="hydrated">
         <gcds-top-nav slot=menu label="Top navigation" alignment=right>
             <gcds-nav-link href=/status-statut/ slot=home>Status-Statut</gcds-nav-link>
             <gcds-nav-link href="https://github.com/fsdh-pfds/status-statut/" slot>GitHub</gcds-nav-link>
         </gcds-top-nav>
     </gcds-header>
+    
 
 
 
