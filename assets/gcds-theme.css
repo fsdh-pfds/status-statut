@@ -3,6 +3,7 @@ nav {
   }
 
   :root {
+    --card-border-color: #d8e8e4;
     --down-border-left-color: #eb3b5a;
     --down-background-color: #ffd0d2;
     --degraded-border-left-color: #f7b731;
