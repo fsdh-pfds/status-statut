@@ -40,6 +40,12 @@ status-website:
             element.setAttribute("lang", newLang);
         });
     }
+    document.addEventListener('DOMContentLoaded', () => {
+      const footer = document.querySelector('footer');
+      if (footer) {
+        footer.insertAdjacentHTML('afterend', '<gcds-footer lang="en" display="full" contextual-heading="Status-Statut"></gcds-footer>');
+      }
+    });
 
     
 
