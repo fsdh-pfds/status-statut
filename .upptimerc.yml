@@ -43,7 +43,7 @@ status-website:
     document.addEventListener('DOMContentLoaded', () => {
       const footer = document.querySelector('footer');
       if (footer) {
-        footer.insertAdjacentHTML('afterend', '<gcds-footer lang="en" display="full" contextual-heading="Status-Statut"></gcds-footer>');
+        footer.insertAdjacentHTML('afterend', '<gcds-footer lang="en" display="compact" contextual-heading="Status-Statut"></gcds-footer>');
       }
     });
 
