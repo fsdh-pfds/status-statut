@@ -33,75 +33,25 @@ status-website:
     </gcds-header>
   
   js: |
-
-    // Global variable to store the current translation data
-    let currentTranslations = {};
-
-    // Loads the translation JSON file for the given language (e.g., "en" or "fr")
-    async function loadTranslations(lang) {
-        try {
-            const response = await fetch(`https://fsdh-pfds.github.io/status-statut/${lang}.json`);
-            currentTranslations = await response.json();
-            console.log(`${lang} JSON Loaded:`, currentTranslations);
-            updateTranslations();
-            localStorage.setItem("selectedLang", lang);
-        } catch (error) {
-            console.error("Error loading JSON file:", error);
-        }
-    }
-
-    // Iterates over elements with the data-i18n attribute and updates their text
-    function updateTranslations() {
-        document.querySelectorAll("[data-i18n]").forEach(element => {
-            const key = element.getAttribute("data-i18n");
-            if (currentTranslations[key]) {
-                let text = currentTranslations[key];
-                // Loop through all data attributes (except data-i18n) and replace placeholders
-                Array.from(element.attributes).forEach(attr => {
-                    if (attr.name.startsWith("data-") && attr.name !== "data-i18n") {
-                        // Convert attribute name (after data-) to uppercase for matching placeholder (e.g., data-date → $DATE)
-                        const variableName = attr.name.slice(5).toUpperCase();
-                        const regex = new RegExp(`\\$${variableName}`, "g");
-                        text = text.replace(regex, attr.value);
-                    }
-                });
-                element.innerText = text;
-            }
-        });
-    }
-
-    // Toggles language by loading the opposite language JSON file and updating all elements with [lang] attributes if needed
     function toggleLanguage() {
-        const currentLang = localStorage.getItem("selectedLang") || "en";
-        const newLang = currentLang === "en" ? "fr" : "en";
-        
-        // Optionally update elements with a [lang] attribute (if you want to adjust native components)
         document.querySelectorAll('[lang]').forEach(element => {
+            let currentLang = element.getAttribute("lang");
+            let newLang = currentLang === "en" ? "fr" : "en";
             element.setAttribute("lang", newLang);
         });
-        
-        loadTranslations(newLang);
     }
-
-    // Insert the custom footer on DOMContentLoaded
     document.addEventListener('DOMContentLoaded', () => {
-        const footer = document.querySelector('footer');
-        if (footer) {
-            footer.insertAdjacentHTML('afterend', '<gcds-footer lang="en" display="compact" contextual-heading="Status-Statut"></gcds-footer>');
-        }
-    });
-
-    // On page load, check the saved language (default to "en") and load its translations
-    document.addEventListener("DOMContentLoaded", () => {
-        const savedLang = localStorage.getItem("selectedLang") || "en";
-        loadTranslations(savedLang);
+      const footer = document.querySelector('footer');
+      if (footer) {
+        footer.insertAdjacentHTML('afterend', '<gcds-footer lang="en" display="compact" contextual-heading="Status-Statut"></gcds-footer>');
+      }
     });
 
 
 
 i18n:
   activeIncidents: Active Incidents / Incidents actifs
-  allSystemsOperational: <p data-i18n="activeIncidentSummary"></p>
+  allSystemsOperational: All systems are operational / Tous les systèmes sont opérationnels
   incidentReport: "Incident #$NUMBER report / Rapport d'incident #$NUMBER →"
   activeIncidentSummary: Opened at $DATE with $POSTS posts / Ouvert à $DATE avec des postes $POSTS
   incidentTitle: Incident $NUMBER Details / Détails de l'incident $NUMBER
