@@ -110,14 +110,9 @@ status-website:
     });
 
 
-
-
-
-
-
 i18n:
   activeIncidents: Active Incidents / Incidents actifs
-  allSystemsOperational: <p data-i18n="allSystemsOperational"></p>
+  allSystemsOperational: <span data-i18n="allSystemsOperational"></span>
   incidentReport: "Incident #$NUMBER report / Rapport d'incident #$NUMBER →"
   activeIncidentSummary: Opened at $DATE with $POSTS posts / Ouvert à $DATE avec des postes $POSTS
   incidentTitle: Incident $NUMBER Details / Détails de l'incident $NUMBER
