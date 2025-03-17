@@ -33,6 +33,7 @@ status-website:
     </gcds-header>
   
   js: |
+
     // Global variable to store the current translation data
     let currentTranslations = {};
 
@@ -58,7 +59,8 @@ status-website:
                 // Loop through all data attributes (except data-i18n) and replace placeholders
                 Array.from(element.attributes).forEach(attr => {
                     if (attr.name.startsWith("data-") && attr.name !== "data-i18n") {
-                        const variableName = attr.name.slice(5).toUpperCase(); // e.g., data-date → $DATE
+                        // Convert attribute name (after data-) to uppercase for matching placeholder (e.g., data-date → $DATE)
+                        const variableName = attr.name.slice(5).toUpperCase();
                         const regex = new RegExp(`\\$${variableName}`, "g");
                         text = text.replace(regex, attr.value);
                     }
@@ -68,12 +70,12 @@ status-website:
         });
     }
 
-    // Toggles language by loading the opposite language JSON file and updating all elements with [lang] attributes
+    // Toggles language by loading the opposite language JSON file and updating all elements with [lang] attributes if needed
     function toggleLanguage() {
         const currentLang = localStorage.getItem("selectedLang") || "en";
         const newLang = currentLang === "en" ? "fr" : "en";
         
-        // Optionally update elements with a [lang] attribute
+        // Optionally update elements with a [lang] attribute (if you want to adjust native components)
         document.querySelectorAll('[lang]').forEach(element => {
             element.setAttribute("lang", newLang);
         });
@@ -95,24 +97,11 @@ status-website:
         loadTranslations(savedLang);
     });
 
-    // Use a MutationObserver to update translations when the DOM changes
-    document.addEventListener("DOMContentLoaded", () => {
-      // Start observing the document body once it's available
-      const observer = new MutationObserver((mutations) => {
-        mutations.forEach(mutation => {
-          if (mutation.addedNodes.length > 0) {
-            updateTranslations();
-          }
-        });
-      });
-
-      observer.observe(document.body, { childList: true, subtree: true });
-    });
 
 
 i18n:
   activeIncidents: Active Incidents / Incidents actifs
-  allSystemsOperational: <span data-i18n="allSystemsOperational"></span>
+  allSystemsOperational: <p data-i18n="activeIncidentSummary"></p>
   incidentReport: "Incident #$NUMBER report / Rapport d'incident #$NUMBER →"
   activeIncidentSummary: Opened at $DATE with $POSTS posts / Ouvert à $DATE avec des postes $POSTS
   incidentTitle: Incident $NUMBER Details / Détails de l'incident $NUMBER
