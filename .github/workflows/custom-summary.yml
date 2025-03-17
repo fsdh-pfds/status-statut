@@ -21,6 +21,10 @@ on:
   repository_dispatch:
     types: [summary]
   workflow_dispatch:
+
+permissions:
+  contents: read
+  
 jobs:
   release:
     name: Generate README
