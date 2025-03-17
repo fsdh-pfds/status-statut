@@ -96,17 +96,20 @@ status-website:
     });
 
     // Use a MutationObserver to update translations when the DOM changes
-    const observer = new MutationObserver((mutations) => {
-        // When new nodes are added, update translations
+    document.addEventListener("DOMContentLoaded", () => {
+      // Start observing the document body once it's available
+      const observer = new MutationObserver((mutations) => {
         mutations.forEach(mutation => {
-            if (mutation.addedNodes.length > 0) {
-                updateTranslations();
-            }
+          if (mutation.addedNodes.length > 0) {
+            updateTranslations();
+          }
         });
+      });
+
+      observer.observe(document.body, { childList: true, subtree: true });
     });
 
-    // Start observing the document body for changes in child elements or subtree modifications
-    observer.observe(document.body, { childList: true, subtree: true });
+
 
 
 
