@@ -38,6 +38,9 @@ status-website:
       </gcds-breadcrumbs>
     </gcds-header>
   
+  customFootHtml: |
+    <gcds-footer lang="en" display="full" contextual-heading="Status | Statut"></gcds-footer>
+
   js: |
     function toggleLanguage() {
         document.querySelectorAll('[lang]').forEach(element => {
@@ -46,14 +49,7 @@ status-website:
             element.setAttribute("lang", newLang);
         });
     }
-    document.addEventListener('DOMContentLoaded', () => {
-      const footer = document.querySelector('footer');
-      if (footer) {
-        footer.insertAdjacentHTML('afterend', '<gcds-footer lang="en" display="full" contextual-heading="Status | Statut"></gcds-footer>');
-      }
-    });
-
-
+    
 
 i18n:
   activeIncidents: Active Incidents / Incidents actifs
