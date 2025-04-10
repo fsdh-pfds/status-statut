@@ -4,10 +4,12 @@ repo: status-statut # The name of this repository
 sites:
   - name: Datahub Home
     url: https://sds.canada.ca
+    expectedStatusCodes:
+      - 200
   - name: Production FSDH Portal
     url: https://federal-science-datahub.canada.ca/login
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
+    expectedStatusCodes:
+      - 200
 
 skipDescriptionUpdate: true
 skipTopicsUpdate: true
