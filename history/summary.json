@@ -11,8 +11,8 @@
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
     "time": 119,
-    "timeDay": 100,
-    "timeWeek": 84,
+    "timeDay": 114,
+    "timeWeek": 90,
     "timeMonth": 119,
     "timeYear": 119,
     "dailyMinutesDown": {}
@@ -41,16 +41,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/thissitedoesnotexist.koj.co.ico",
     "slug": "test-broken-site",
     "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "uptime": "4.07%",
+    "uptimeDay": "4.07%",
+    "uptimeWeek": "4.07%",
+    "uptimeMonth": "4.07%",
+    "uptimeYear": "4.07%",
     "time": 0,
     "timeDay": 0,
     "timeWeek": 0,
     "timeMonth": 0,
     "timeYear": 0,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2025-04-10": 0
+    }
   }
 ]
