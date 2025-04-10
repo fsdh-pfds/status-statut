@@ -6,6 +6,8 @@ sites:
     url: https://sds.canada.ca
   - name: Production FSDH Portal
     url: https://federal-science-datahub.canada.ca/login
+  - name: Test Broken Site
+    url: https://thissitedoesnotexist.koj.co
 
 skipDescriptionUpdate: true
 skipTopicsUpdate: true
