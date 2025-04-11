@@ -5,18 +5,19 @@
     "icon": "https://icons.duckduckgo.com/ip3/sds.canada.ca.ico",
     "slug": "datahub-home",
     "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 118,
-    "timeDay": 96,
-    "timeWeek": 87,
-    "timeMonth": 118,
-    "timeYear": 118,
+    "uptime": "96.71%",
+    "uptimeDay": "10.23%",
+    "uptimeWeek": "87.18%",
+    "uptimeMonth": "96.71%",
+    "uptimeYear": "96.71%",
+    "time": 117,
+    "timeDay": 87,
+    "timeWeek": 82,
+    "timeMonth": 117,
+    "timeYear": 117,
     "dailyMinutesDown": {
-      "2025-04-10": 0
+      "2025-04-11": 39,
+      "2025-04-10": 1254
     }
   },
   {
@@ -25,18 +26,19 @@
     "icon": "https://icons.duckduckgo.com/ip3/federal-science-datahub.canada.ca.ico",
     "slug": "production-fsdh-portal",
     "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "99.90%",
-    "uptimeWeek": "99.99%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "uptime": "96.70%",
+    "uptimeDay": "10.14%",
+    "uptimeWeek": "87.16%",
+    "uptimeMonth": "96.70%",
+    "uptimeYear": "96.70%",
     "time": 299,
     "timeDay": 0,
     "timeWeek": 0,
     "timeMonth": 299,
     "timeYear": 299,
     "dailyMinutesDown": {
-      "2025-04-10": 1
+      "2025-04-11": 39,
+      "2025-04-10": 1255
     }
   }
 ]
