@@ -1,7 +1,7 @@
 url: https://federal-science-datahub.canada.ca/login
-status: up
-code: 200
-responseTime: 608
-lastUpdated: 2025-05-15T23:12:59.224Z
+status: down
+code: 500
+responseTime: 130
+lastUpdated: 2025-05-16T16:09:10.580Z
 startTime: 2025-03-14T18:22:32.715Z
 generator: Upptime <https://github.com/upptime/upptime>
