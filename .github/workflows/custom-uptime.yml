@@ -42,6 +42,14 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
           token: ${{ steps.create_token.outputs.token }}
+          
+      - name: Get runner public IP
+        id: runner_ip
+        run: |
+          # query a public “what’s my IP” service
+          ip=$(curl -s https://api.ipify.org)
+          echo "Runner public IP: $ip"
+          
       - name: Check endpoint status
         uses: upptime/uptime-monitor@6996123d80fe861b66994b257d4e0eb99d9d7db6 # v1.40.1
         with:
