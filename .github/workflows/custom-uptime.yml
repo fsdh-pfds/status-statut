@@ -45,9 +45,20 @@ jobs:
           
       - name: Get runner public IP
         id: runner_ip
+        continue-on-error: true 
         run: |
-          # query a public “what’s my IP” service
-          ip=$(curl -s https://api.ipify.org)
+          # try a list of reliable “what’s my IP” endpoints
+          services=(
+            "https://api.ipify.org"
+            "https://ifconfig.me"
+            "https://icanhazip.com"
+            "https://checkip.amazonaws.com"
+          )
+          ip=""
+          for svc in "${services[@]}"; do
+            ip=$(curl -fs "$svc") && break   # -f fails on HTTP errors, -s silences progress
+          done
+          ip=${ip:-"unknown"}                # fallback if all of them fail
           echo "Runner public IP: $ip"
           
       - name: Check endpoint status
