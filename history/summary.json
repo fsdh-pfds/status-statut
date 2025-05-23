@@ -5,15 +5,15 @@
     "icon": "https://icons.duckduckgo.com/ip3/federal-science-datahub.canada.ca.ico",
     "slug": "production-fsdh-portal",
     "status": "up",
-    "uptime": "89.35%",
+    "uptime": "89.47%",
     "uptimeDay": "100.00%",
-    "uptimeWeek": "99.72%",
+    "uptimeWeek": "100.00%",
     "uptimeMonth": "99.93%",
-    "uptimeYear": "89.35%",
+    "uptimeYear": "89.47%",
     "time": 309,
-    "timeDay": 201,
-    "timeWeek": 304,
-    "timeMonth": 322,
+    "timeDay": 234,
+    "timeWeek": 337,
+    "timeMonth": 320,
     "timeYear": 309,
     "dailyMinutesDown": {
       "2025-05-16": 29,
@@ -26,5 +26,23 @@
       "2025-04-11": 1440,
       "2025-04-10": 1255
     }
+  },
+  {
+    "name": "Shared Services Canada GC site",
+    "url": "https://www.canada.ca/en/shared-services.html",
+    "icon": "https://icons.duckduckgo.com/ip3/www.canada.ca.ico",
+    "slug": "shared-services-canada-gc-site",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 0,
+    "timeDay": 0,
+    "timeWeek": 0,
+    "timeMonth": 0,
+    "timeYear": 0,
+    "dailyMinutesDown": {}
   }
 ]
