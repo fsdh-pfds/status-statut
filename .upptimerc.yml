@@ -10,6 +10,10 @@ sites:
     url: https://www.canada.ca/en/shared-services.html
     expectedStatusCodes:
       - 200
+  - name: Shared Services Canada GC site
+    url: https://sds.canada.ca
+    expectedStatusCodes:
+      - 200
 skipDescriptionUpdate: true
 skipTopicsUpdate: true
 skipHomepageUpdate: true
