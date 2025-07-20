@@ -5,15 +5,15 @@
     "icon": "https://icons.duckduckgo.com/ip3/federal-science-datahub.canada.ca.ico",
     "slug": "production-fsdh-portal",
     "status": "up",
-    "uptime": "94.12%",
+    "uptime": "94.17%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "99.95%",
-    "uptimeYear": "94.12%",
+    "uptimeYear": "94.17%",
     "time": 326,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 197,
+    "timeMonth": 180,
     "timeYear": 326,
     "dailyMinutesDown": {
       "2025-06-21": 24,
@@ -45,7 +45,7 @@
     "time": 2184,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 1825,
+    "timeMonth": 0,
     "timeYear": 2184,
     "dailyMinutesDown": {}
   },
@@ -63,7 +63,7 @@
     "time": 47,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 47,
+    "timeMonth": 0,
     "timeYear": 47,
     "dailyMinutesDown": {}
   }
