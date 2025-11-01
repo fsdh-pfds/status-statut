@@ -1,7 +1,7 @@
 url: https://sds.canada.ca
-status: down
-code: 503
-responseTime: 68
-lastUpdated: 2025-11-01T21:59:05.678Z
+status: up
+code: 200
+responseTime: 108
+lastUpdated: 2025-11-01T22:23:14.465Z
 startTime: 2025-06-19T19:46:14.672Z
 generator: Upptime <https://github.com/upptime/upptime>
