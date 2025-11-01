@@ -54,19 +54,19 @@
     "url": "https://sds.canada.ca",
     "icon": "https://icons.duckduckgo.com/ip3/sds.canada.ca.ico",
     "slug": "sds-home-site",
-    "status": "down",
+    "status": "up",
     "uptime": "100.00%",
-    "uptimeDay": "99.99%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
+    "uptimeDay": "99.34%",
+    "uptimeWeek": "99.91%",
+    "uptimeMonth": "99.98%",
     "uptimeYear": "100.00%",
-    "time": 212,
-    "timeDay": 179,
-    "timeWeek": 125,
+    "time": 210,
+    "timeDay": 155,
+    "timeWeek": 123,
     "timeMonth": 125,
-    "timeYear": 212,
+    "timeYear": 210,
     "dailyMinutesDown": {
-      "2025-11-01": 0
+      "2025-11-01": 10
     }
   }
 ]
