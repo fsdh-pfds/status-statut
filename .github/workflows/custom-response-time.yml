@@ -37,7 +37,7 @@ jobs:
           app-id: ${{ vars.FSDH_UPPTIME_BOT_APP_ID }}
           private-key: ${{ secrets.FSDH_UPPTIME_BOT_APP_KEY }}
       - name: Checkout
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
         with:
           ref: ${{ github.head_ref }}
           token: ${{ steps.create_token.outputs.token }}
