@@ -36,9 +36,9 @@
     "url": "https://www.canada.ca/en/shared-services.html",
     "icon": "https://icons.duckduckgo.com/ip3/www.canada.ca.ico",
     "slug": "shared-services-canada-gc-site",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
@@ -47,7 +47,9 @@
     "timeWeek": 257,
     "timeMonth": 224,
     "timeYear": 1827,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-03-06": 0
+    }
   },
   {
     "name": "SDS Home Site",
