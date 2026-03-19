@@ -38,15 +38,14 @@ status-website:
 
   customBodyHtml: |
     <gcds-header lang="en" lang-href="javascript:void(0)" signature-variant="colour" skip-to-href="#" role="banner" class="hydrated" onclick="toggleLanguage()">
-      <gcds-breadcrumbs slot="breadcrumb" class="hydrated">
-        <gcds-breadcrumbs-item href="https://sds.canada.ca/" role="listitem" class="gcds-breadcrumbs-item hydrated">
-          Federal Science DataHub / Plateforme fédérale de données scientifiques
-        </gcds-breadcrumbs-item>
-      </gcds-breadcrumbs>
+        <gcds-top-nav slot=menu label="Top navigation" alignment=right>
+            <gcds-nav-link href=/status-statut/ slot=home>Status-Statut</gcds-nav-link>
+            <gcds-nav-link href="https://github.com/ssc-sp/status-statut/" slot>GitHub</gcds-nav-link>
+        </gcds-top-nav>
     </gcds-header>
   
   customFootHtml: |
-    <gcds-footer lang="en" display="full" contextual-heading="Status | Statut"></gcds-footer>
+    <gcds-footer lang="en" display="compact" contextual-heading="Status | Statut"></gcds-footer>
 
   js: |
     function toggleLanguage() {
