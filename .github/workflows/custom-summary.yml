@@ -32,10 +32,10 @@ jobs:
     steps:
       - name: Create App token
         id: create_token
-        uses: fsdh-pfds/.github/.github/actions/create-app-token@main
+        uses: ssc-sp/.github/.github/actions/create-app-token@main
         with:
-          app-id: ${{ vars.FSDH_UPPTIME_BOT_APP_ID }}
-          private-key: ${{ secrets.FSDH_UPPTIME_BOT_APP_KEY }}
+          app-id: ${{ vars.UPPTIME_MANAGER_ID }}
+          private-key: ${{ secrets.UPPTIME_MANAGER_KEY }}
       - name: Checkout
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
         with:
