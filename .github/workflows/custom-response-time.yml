@@ -47,4 +47,4 @@ jobs:
           command: "response-time"
         env:
           GH_PAT: ${{ steps.create_token.outputs.token }}
-          SECRETS_CONTEXT: ${{ toJson(secrets) }}
+          # SECRETS_CONTEXT: ${{ toJson(secrets) }}
